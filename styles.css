@@ -1,0 +1,68 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #3a083a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(49, 10, 42, 0.1);
+    width: 45%;
+}
+
+.weather-forecast h2,
+.sms-reports h2 {
+    color: #3a083a;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #3a083a;
+    padding-bottom: 5px;
+}
+
+footer {
+    background-color: #3a083a;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Button styles */
+.button {
+    background-color: #3a083a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.button:hover {
+    background-color: #5a305a;
+}
+
+.button:focus {
+    outline: none;
+}
