@@ -1,5 +1,5 @@
 // Define the API link
-const apiUrl = 'https://api.tomorrow.io/v4/timelines?location=-29.609988,28.233608&fields=weatherCodeFullDay&timesteps=1d&units=imperial&apikey=xAwcv7910PENIDTLrJ0rgbz4MdqzZ3Ic';
+const apiUrl = 'https://api.tomorrow.io/v4/timelines?location=-29.609988,%2028.233608&fields=weatherCodeFullDay&timesteps=1d&units=imperial&apikey=xAwcv7910PENIDTLrJ0rgbz4MdqzZ3Ic';
 
 // Mapping between weather codes and descriptions
 const weatherDescriptions = {
@@ -108,31 +108,70 @@ function sendSMS(message) {
 // Function to check if weather is critical
 function isCriticalWeather(weatherDescription) {
     const criticalWeatherConditions = [
-        'Heavy Rain', 'Flurries', 'Light Snow', 'Snow', 'Heavy Snow',
-        'Freezing Rain', 'Ice Pellets', 'Thunderstorm', 'Heavy Ice Pellets',
-        'Light Ice Pellets', 'Heavy Freezing Rain', 'Light Freezing Rain',
-        'Freezing Drizzle', 'Drizzle', 'Rain', 'Light Rain'
+        'Heavy Rain','Drizzle and Heavy Rain','Rain and Heavy Rain','Light Rain and Heavy Rain',
+        'Mostly Clear and Heavy Rain','Partly Cloudy and Heavy Rain','Mostly Cloudy and Heavy Rain',
+        'Rain','Light Rain','Drizzle','Partly Cloudy and Drizzle','Mostly Clear and Drizzle',
+        'Mostly Cloudy and Drizzle','Thunderstorm','Mostly Clear and Thunderstorm',
+        'Partly Cloudy and Thunderstorm','Mostly Cloudy and Thunderstorm','Freezing Rain',
+        'Light Freezing Rain','Drizzle and Freezing Rain','Mostly Clear and Freezing Rain',
+        'Partly Cloudy and Freezing Rain','Mostly Cloudy and Freezing Rain','Light Rain and Freezing Rain',
+        'Rain and Freezing Rain','Heavy Freezing Rain','Mostly Clear and Heavy Freezing Rain',
+        'Partly Cloudy and Heavy Freezing Rain','Mostly Cloudy and Heavy Freezing Rain',
+        'Ice Pellets','Light Ice Pellets','Drizzle and Ice Pellets','Freezing Rain and Ice Pellets',
+        'Light Rain and Ice Pellets','Rain and Ice Pellets','Heavy Ice Pellets',
+        'Mostly Clear and Heavy Ice Pellets','Partly Cloudy and Heavy Ice Pellets',
+        'Mostly Cloudy and Heavy Ice Pellets','Snow','Light Snow','Partly Cloudy and Snow',
+        'Mostly Clear and Snow','Mostly Cloudy and Snow','Heavy Snow','Mostly Clear and Heavy Snow',
+        'Partly Cloudy and Heavy Snow','Mostly Cloudy and Heavy Snow','Snow and Freezing Rain',
+        'Snow and Ice Pellets','Light Fog'
     ];
+    
     return criticalWeatherConditions.includes(weatherDescription);
 }
 
 function isCriticalWeather(weatherDescription1) {
     const criticalWeatherConditions = [
-        'Heavy Rain', 'Flurries', 'Light Snow', 'Snow', 'Heavy Snow',
-        'Freezing Rain', 'Ice Pellets', 'Thunderstorm', 'Heavy Ice Pellets',
-        'Light Ice Pellets', 'Heavy Freezing Rain', 'Light Freezing Rain',
-        'Freezing Drizzle', 'Drizzle', 'Rain', 'Light Rain'
+        'Heavy Rain','Drizzle and Heavy Rain','Rain and Heavy Rain','Light Rain and Heavy Rain',
+        'Mostly Clear and Heavy Rain','Partly Cloudy and Heavy Rain','Mostly Cloudy and Heavy Rain',
+        'Rain','Light Rain','Drizzle','Partly Cloudy and Drizzle','Mostly Clear and Drizzle',
+        'Mostly Cloudy and Drizzle','Thunderstorm','Mostly Clear and Thunderstorm',
+        'Partly Cloudy and Thunderstorm','Mostly Cloudy and Thunderstorm','Freezing Rain',
+        'Light Freezing Rain','Drizzle and Freezing Rain','Mostly Clear and Freezing Rain',
+        'Partly Cloudy and Freezing Rain','Mostly Cloudy and Freezing Rain','Light Rain and Freezing Rain',
+        'Rain and Freezing Rain','Heavy Freezing Rain','Mostly Clear and Heavy Freezing Rain',
+        'Partly Cloudy and Heavy Freezing Rain','Mostly Cloudy and Heavy Freezing Rain',
+        'Ice Pellets','Light Ice Pellets','Drizzle and Ice Pellets','Freezing Rain and Ice Pellets',
+        'Light Rain and Ice Pellets','Rain and Ice Pellets','Heavy Ice Pellets',
+        'Mostly Clear and Heavy Ice Pellets','Partly Cloudy and Heavy Ice Pellets',
+        'Mostly Cloudy and Heavy Ice Pellets','Snow','Light Snow','Partly Cloudy and Snow',
+        'Mostly Clear and Snow','Mostly Cloudy and Snow','Heavy Snow','Mostly Clear and Heavy Snow',
+        'Partly Cloudy and Heavy Snow','Mostly Cloudy and Heavy Snow','Snow and Freezing Rain',
+        'Snow and Ice Pellets','Light Fog'
     ];
+
     return criticalWeatherConditions.includes(weatherDescription1);
 }
 
 function isCriticalWeather(weatherDescription2) {
     const criticalWeatherConditions = [
-        'Heavy Rain', 'Flurries', 'Light Snow', 'Snow', 'Heavy Snow',
-        'Freezing Rain', 'Ice Pellets', 'Thunderstorm', 'Heavy Ice Pellets',
-        'Light Ice Pellets', 'Heavy Freezing Rain', 'Light Freezing Rain',
-        'Freezing Drizzle', 'Drizzle', 'Rain', 'Light Rain'
+        'Heavy Rain','Drizzle and Heavy Rain','Rain and Heavy Rain','Light Rain and Heavy Rain',
+        'Mostly Clear and Heavy Rain','Partly Cloudy and Heavy Rain','Mostly Cloudy and Heavy Rain',
+        'Rain','Light Rain','Drizzle','Partly Cloudy and Drizzle','Mostly Clear and Drizzle',
+        'Mostly Cloudy and Drizzle','Thunderstorm','Mostly Clear and Thunderstorm',
+        'Partly Cloudy and Thunderstorm','Mostly Cloudy and Thunderstorm','Freezing Rain',
+        'Light Freezing Rain','Drizzle and Freezing Rain','Mostly Clear and Freezing Rain',
+        'Partly Cloudy and Freezing Rain','Mostly Cloudy and Freezing Rain','Light Rain and Freezing Rain',
+        'Rain and Freezing Rain','Heavy Freezing Rain','Mostly Clear and Heavy Freezing Rain',
+        'Partly Cloudy and Heavy Freezing Rain','Mostly Cloudy and Heavy Freezing Rain',
+        'Ice Pellets','Light Ice Pellets','Drizzle and Ice Pellets','Freezing Rain and Ice Pellets',
+        'Light Rain and Ice Pellets','Rain and Ice Pellets','Heavy Ice Pellets',
+        'Mostly Clear and Heavy Ice Pellets','Partly Cloudy and Heavy Ice Pellets',
+        'Mostly Cloudy and Heavy Ice Pellets','Snow','Light Snow','Partly Cloudy and Snow',
+        'Mostly Clear and Snow','Mostly Cloudy and Snow','Heavy Snow','Mostly Clear and Heavy Snow',
+        'Partly Cloudy and Heavy Snow','Mostly Cloudy and Heavy Snow','Snow and Freezing Rain',
+        'Snow and Ice Pellets','Light Fog'
     ];
+
     return criticalWeatherConditions.includes(weatherDescription2);
 }
 
@@ -156,7 +195,7 @@ function fetchAndCheckWeather() {
             const timelines = data.data.timelines;
 
             // Check each day for critical weather conditions
-            timelines.forEach((dayTimeline, index) => {
+            /*timelines.forEach((dayTimeline, index) => {
                 // Check if the day's weather is critical
                 const dayWeather = dayTimeline.intervals[0].values.weatherCodeFullDay;
                 if (dayWeather in weatherDescriptions) {
@@ -171,7 +210,7 @@ function fetchAndCheckWeather() {
                         }
                     }
                 }
-            });
+            });*/
 
             // Get the timeline for the fourth day (index 4)
             const fourthDayTimeline = timelines[0].intervals[3];
