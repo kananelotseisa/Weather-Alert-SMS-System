@@ -1,5 +1,5 @@
 // Define the API link
-const apiUrl = 'https://api.tomorrow.io/v4/timelines?location=-29.609988,%2028.233608&fields=weatherCodeFullDay&timesteps=1d&units=imperial&apikey=xAwcv7910PENIDTLrJ0rgbz4MdqzZ3Ic';
+const apiUrl = 'https://api.tomorrow.io/v4/timelines?location=-29.609988,28.233608&fields=weatherCodeFullDay&timesteps=1d&units=imperial&apikey=xAwcv7910PENIDTLrJ0rgbz4MdqzZ3Ic';
 
 // Mapping between weather codes and descriptions
 const weatherDescriptions = {
