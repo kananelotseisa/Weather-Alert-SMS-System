@@ -1,0 +1,25 @@
+// Array of weather conditions fetched from API
+var weatherConditions = ["hot", "cold", "warm", "rainy", "windy"]; // Example data
+
+// Array to store filtered weather messages
+var filteredMessages = [];
+
+// Iterate through each weather condition
+for (var i = 0; i < weatherConditions.length; i++) {
+    var weather = weatherConditions[i];
+
+    // Check if the weather condition is hot, cold, or warm
+    if (weather === "hot" || weather === "windy"  || weather === "cold" || weather === "warm") {
+        var message =  weather;
+        filteredMessages.push(message);
+    }
+}
+
+// Concatenate the filtered messages with "and" between the last two
+var finalMessage = filteredMessages.join(", ");
+var lastIndex = finalMessage.lastIndexOf(",");
+if (lastIndex !== -1) {
+    finalMessage ="weather is "+ finalMessage.substring(0, lastIndex) + " and" + finalMessage.substring(lastIndex + 1);
+}
+
+console.log(finalMessage);
